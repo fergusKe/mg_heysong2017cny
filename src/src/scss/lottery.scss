@@ -1,0 +1,498 @@
+@import "compass/css3";
+@import 'mixins';
+
+.sky-light {
+  /*@include bg("../images/lottery/slotMachine/sky-light.png");*/
+  position: absolute;
+  top: 178px;
+  left: 618px;
+  z-index: 1;
+  .s1 {
+    @include bg("../images/lottery/slotMachine/sky-light-item1.png");
+    position: absolute;
+    top: 49px;
+    left: 0;
+  }
+  .s2 {
+    @include bg("../images/lottery/slotMachine/sky-light-item2.png");
+    position: absolute;
+    top: 0;
+    left: 77px;
+  }
+  .s3 {
+    @include bg("../images/lottery/slotMachine/sky-light-item3.png");
+    position: absolute;
+    top: 78px;
+    left: 123px;
+  }
+}
+.input-number-box {
+  position: absolute;
+  top: 304px;
+  width: 100%;
+  @include bg('../images/lottery/input-number.png');
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+  .input-item1 {
+    @include bg("../images/lottery/input-item1.png");
+    position: absolute;
+    left: -61px;
+    top: -43px;
+  }
+  .input-item2 {
+    @include bg("../images/lottery/input-item2.png");
+    position: absolute;
+    left: 589px;
+    top: -25px;
+  }
+  .input-item3 {
+    @include bg("../images/lottery/input-item3.png");
+    position: absolute;
+    left: 468px;
+    top: 317px;
+  }
+  .input-text {
+    @include bg("../images/lottery/input-text.png");
+    position: absolute;
+    left: 68px;
+        top: 30px;
+  }
+  .table-input {
+    position: absolute;
+    top: 138px;
+    width: 100%;
+    .form-input {
+      margin-bottom: 23px;
+      & ~ .form-input {
+
+      }
+      input {
+        float: none;
+        margin-left: 143px;
+        width: 442px;
+        height: 75px;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+        font-size: 36px;
+      }
+    }
+    .input-next-btn {
+      @include bg("../images/lottery/input-number-btn.png");
+      position: absolute;
+      left: 119px;
+      top: 316px;
+      background-color: transparent;
+    }
+  }
+  .input-more-btn {
+    display: none;
+    @include bg("../images/lottery/input-more-btn.png");
+    position: absolute;
+    left: 119px;
+    top: 455px;
+  }
+}
+.input-number-box {
+  &.step1 {
+    // display: none;
+  }
+  &.step2 {
+    display: none;
+    @include bg('../images/lottery/input-number-step2.png');
+    .table-input, .input-item3 {
+      display: none;
+    }
+    .input-more-btn {
+      display: block;
+    }
+  }
+}
+.slot-machine-box {
+  position: absolute;
+  top: 292px;
+  width: 100%;
+  height: image-height('../images/lottery/slotMachine/slot-machine.png');
+  z-index: 1;
+  .slot-award {
+    display: none;
+    margin-top: -85px;
+    margin-left: 5px;
+  }
+  .slot-handle {
+    position: absolute;
+    top: 177px;
+    left: 700px;
+    width: image-width('../images/lottery/slotMachine/slot-machine-handle.png');
+    height: 268px;
+    background: url('../images/lottery/slotMachine/slot-machine-handle.png') 0 0 no-repeat;
+    cursor: pointer;
+    &.active {
+      top: 211px;
+      background: url('../images/lottery/slotMachine/slot-machine-handle.png') 0 -268px no-repeat;
+    }
+  }
+  .slot-machine {
+    position: absolute;
+    left: 35px;
+    @include bg("../images/lottery/slotMachine/slot-machine.png");
+    .slot-title {
+      @include bg("../images/lottery/slotMachine/step1-text-top.png");
+      position: absolute;
+      top: 15px;
+      left: -27px;
+    }
+    .gold {
+      .g1 {
+        @include bg("../images/lottery/slotMachine/gold-item1.png");
+        position: absolute;
+        top: 61px;
+        left: 574px;
+      }
+      .g2 {
+        @include bg("../images/lottery/slotMachine/gold-item2.png");
+        position: absolute;
+        top: 23px;
+        left: 603px;
+      }
+    }
+    .s-l {
+      position: absolute;
+      width: 157px;
+      height: 238px;
+      top: 249px;
+      font-size: 0;
+      overflow: hidden;
+      li {
+        position: relative;
+        width: 100%;
+        height: 238px;
+      }
+      img {
+        position: absolute;
+        @include align();
+      }
+    }
+    .slot-list1 {
+      left: 65px;
+    }
+    .slot-list2 {
+      left: 257px;
+    }
+    .slot-list3 {
+      left: 448px;
+    }
+    .notes {
+      @include bg("../images/lottery/slotMachine/step1-text-bottom.png");
+      @include align("h");
+      top: 552px;
+    }
+  }
+}
+.slot-machine-box {
+  display: none;
+  .step1 {
+    // display: none;
+  }
+  .step2 {
+    display: none;
+    &.slot-title {
+      @include bg("../images/lottery/slotMachine/step2-text-top.png");
+      top: -9px;
+      left: 44px;
+    }
+    &.notes {
+      @include bg("../images/lottery/slotMachine/step2-text-bottom.png");
+    }
+    &.slot-next-btn {
+      @include bg("../images/lottery/slotMachine/more-number-btn.png");
+      position: absolute;
+      top: 589px;
+      left: 180px;
+      z-index: 1;
+    }
+  }
+  &.step2 {
+    display: none;
+    .slot-machine-box {
+      // @include bg("../images/lottery/slotMachine/step3-award.png");
+      top: 207px;
+    }
+    .slot-handle {
+      display: none;
+    }
+    .slot-machine {
+      display: none;
+    }
+    .slot-award {
+      display: block;
+    }
+    .slot-next-btn {
+      @include bg("../images/lottery/slotMachine/download-btn.png");
+      position: absolute;
+      top: 582px;
+      left: 180px;
+      z-index: 1;
+    }
+  }
+}
+
+.popup {
+  &#login {
+    .login-box {
+      // @include bg("../images/popup/lottery/login-first-content-sample.png");
+      position: relative;
+      margin: 0 auto;
+      padding-top: 89px;
+      width: 651px;
+      height: 735px;
+    }
+    .login-content {
+      @include bg("../images/popup/lottery/login-first-content.png");
+      position: absolute;
+      // margin-top: -12px;
+      padding-top: 95px;
+      .table-again {
+        display: none;
+      }
+      &.again {
+        @include bg("../images/popup/lottery/login-again-content.png");
+        padding-top: 238px;
+        .table-again {
+          display: block;
+        }
+        .table-first {
+          display: none;
+        }
+      }
+    }
+    .login-tabs {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 101px;
+      // z-index: 1;
+      li {
+        // display: inline-block;
+        // position: relative;
+        // float: left;
+        position: absolute;
+        margin-top: 10px;
+        // vertical-align: top;
+        // z-index: -1;
+        & ~ li {
+          // margin-left: 9px;
+        }
+        &.active {
+          margin-top: 0;
+          z-index: 1;
+        }
+      }
+      .first {
+        left: 0;
+        @include bg("../images/popup/lottery/login-first.png");
+        &.active {
+          @include bg("../images/popup/lottery/login-first-active.png");
+        }
+      }
+      .again {
+        right: 0;
+        @include bg("../images/popup/lottery/login-again.png");
+        &.active {
+          @include bg("../images/popup/lottery/login-again-active.png");
+        }
+      }
+    }
+    form {
+      margin: 0 auto;
+      width: 516px;
+      .form-name {
+        label {
+          background: url("../images/popup/lottery/name.png") 50% 50% no-repeat;
+        }
+      }
+      .form-id {
+        label {
+          background: url("../images/popup/lottery/id.png") 50% 50% no-repeat;
+        }
+      }
+      .form-phone {
+        label {
+          background: url("../images/popup/lottery/phone.png") 50% 50% no-repeat;
+        }
+      }
+      .form-mail {
+        label {
+          background: url("../images/popup/lottery/mail.png") 50% 50% no-repeat;
+        }
+      }
+      .cb-content {
+        @include bg("../images/popup/lottery/checkbox-text.png");
+        position: absolute;
+        top: 16px;
+        left: 58px;
+        .activity-btn {
+          position: absolute;
+          width: 106px;
+          height: 27px;
+          top: 0;
+          left: 181px;
+        }
+        .privacy-btn {
+          position: absolute;
+          width: 131px;
+          height: 27px;
+          top: 0;
+          left: 313px;
+        }
+      }
+      .next-btn {
+        @include bg("../images/popup/lottery/next-btn.png");
+        position: absolute;
+        top: 540px;
+        left: 115px;
+        border: none;
+        background-color: transparent;
+      }
+    }
+  }
+  &#congratulation {
+    background: rgba(255, 255, 255, .5);
+    .popup-content {
+      @include bg("../images/lottery/slotMachine/congratulation.png");
+      margin-top: 100px;
+    }
+  }
+  &#privacy {
+    // display: block;
+    color: #FFF;
+    text-align: center;
+    font-size: 30px;
+    .privacy-content{
+      @include bg("../images/popup/lottery/privacy-content.png");
+      position: relative;
+      margin: 0 auto;
+      padding-top: 45px;
+      .rollbar-box {
+        width: 685px;
+        height: 566px;
+        img {
+          margin-left: -36px;
+        }
+      }
+    }
+    .close-btn {
+      @include bg("../images/popup/lottery/close-btn.png");
+      @include align("h");
+      bottom: 20px;
+    }
+  }
+}
+
+.form-group {
+	&.row {
+		label {
+			float: left;
+			width: 30%;
+      height: 58px;
+      margin-bottom: 0;
+		}
+		input {
+      float: right;
+      width: 66%;
+      border: 2px solid #000;
+      font-size: 30px;
+      height: 58px;
+		}
+		&::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+}
+.form-check {
+	clear: both;
+}
+
+// checkbox
+.checkbox-area {
+  position: relative;
+  svg {
+    border: none;
+    display: block;
+  }
+
+  label {
+  	position: absolute;
+    top: 3px;
+    left: 0;
+  	cursor: pointer;
+  	// display: block;
+  	// font-size: 1.25em;
+  	// line-height: 2.5rem;
+  	// margin: 0.5em auto;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	user-select: none;
+  	// width: 20rem;
+    svg {
+      height: 48px;
+      float: left;
+      // margin-right: 0.5rem;
+      width: 48px;
+      rect, polyline {
+        fill: none;
+        stroke-width: 4;
+      }
+      rect {
+        stroke: #444;
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+    margin: 10px 0 0 5px;
+    width: 37px;
+    height: 37px;
+    &:checked + label svg {
+      rect {
+        stroke: #444;
+      }
+      polyline {
+        stroke: #C1000A;
+      }
+      polyline {
+        -webkit-animation: checked 0.5s ease forwards;
+        animation: checked 0.5s ease forwards;
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+      }
+    }
+  }
+
+  @-webkit-keyframes checked {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes checked {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+.checkbox-area.ie{
+  label {
+    display: none;
+  }
+  input[type="checkbox"] {
+    display: block;
+  }
+}

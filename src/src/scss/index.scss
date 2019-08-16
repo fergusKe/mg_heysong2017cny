@@ -1,0 +1,80 @@
+@import "compass/css3";
+@import 'mixins';
+
+.title {
+  @include bg("../images/title.png");
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  z-index: 2;
+}
+.lottery-btn {
+  @include bg("../images/lottery.png");
+  position: absolute;
+  top: 385px;
+  left: 85px;
+  z-index: 1;
+  .lottery-content {
+    @include bg("../images/lottery.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .lottery-item1 {
+    @include bg("../images/lottery-item1.png");
+    position: absolute;
+    top: -59px;
+    left: -4px;
+  }
+  .lottery-item2 {
+    @include bg("../images/lottery-item2.png");
+    position: absolute;
+    top: 29px;
+    left: 78px;
+  }
+  .lottery-handle {
+    position: absolute;
+    left: 589px;
+    top: -55px;
+    width: 66px;
+    height: 177px;
+    overflow: hidden;
+    z-index: -1;
+    img {
+      width: 100%;
+    }
+    &.active {
+      top: -43px;
+      img {
+        position: absolute;
+        top: -188px;
+      }
+    }
+  }
+}
+.intro {
+  position: absolute;
+  top: 578px;
+  left: 20px;
+  width: 741px;
+  height: 214px;
+  z-index: 1;
+  .intro-video {
+    @include bg("../images/intro-video.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .intro-text {
+    @include bg("../images/intro-text.png");
+    position: absolute;
+    top: 12px;
+    right: 0;
+  }
+}
+.deco {
+  @include bg("../images/deco.png");
+  position: absolute;
+  top: 794px;
+  left: 11px;
+}

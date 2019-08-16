@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+/* 得獎名單 */
+
+.rollbar-box table{
+	position:relative;
+	margin-left:60px;
+	margin-bottom:10px;
+	border-collapse: collapse;
+	width: 530px;
+	font-size:20px;
+	font-family:微軟正黑體, Arial, Helvetica, sans-serif;
+}
+
+.rollbar-box table.winnerList2{
+	position:relative;
+	margin-left:60px;
+	margin-bottom:30px;
+	border-collapse: collapse;
+	width: 530px;
+	font-size:16px;
+	font-family:微軟正黑體, Arial, Helvetica, sans-serif;
+}
+
+
+.rollbar-box th {
+	background-color: #fff34a;
+    color: #c1000a;
+    height: 20px;
+}
+
+.rollbar-box th, td {
+	padding: 5px 5px 5px 5px;
+    text-align: center;
+}
+
+.rollbar-box td {
+	font-family: "Courier New", Courier, monospace; 
+	font-weight:bold;
+}
+
+.rollbar-box th.name, td.name {
+	font-family:微軟正黑體, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	padding-left:10px;
+}
+
+.rollbar-box tr:nth-child(odd) {
+	background-color: #ffe6b8;
+}

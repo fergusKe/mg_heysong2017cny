@@ -1,0 +1,323 @@
+// @import "compass/reset";
+
+// Core variables and mixins
+@import "variables";
+@import 'mixins';
+
+// Reset
+@import "normalize";
+
+// Core CSS
+@import "scaffolding";
+@import "type";
+@import "tables";
+@import "forms";
+@import "buttons";
+
+a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  min-width: 800px;
+  overflow: hidden;
+  background: url("../images/bg.jpg") 50% 0 no-repeat;
+  // background: url("../images/index-sample.png") 50% 0 no-repeat;
+  // background: url("../images/lottery/slotMachine-sample.jpg") 50% 0 no-repeat;
+}
+.main {
+  position: relative;
+  width: 800px;
+  height: image-height("../images/bg.jpg");
+  margin: 0 auto;
+}
+.logo {
+  @include bg("../images/logo.png");
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  z-index: 10;
+}
+.menu-btn {
+  @include bg("../images/menu-btn.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+.title {
+  @include bg("../images/lottery/title.png");
+  position: absolute;
+  top: -28px;
+  left: 82px;
+  z-index: 2;
+}
+.deco {
+  // @include bg("../images/lottery/deco.png");
+  position: absolute;
+  top: 875px;
+  left: 3px;
+  z-index: 2;
+  .d1 {
+    @include bg("../images/lottery/deco-item1.png");
+    position: absolute;
+    top: 16px;
+    left: 0;
+  }
+  .d2 {
+    @include bg("../images/lottery/deco-item2.png");
+    position: absolute;
+    top: 149px;
+    left: 157px;
+  }
+  .d3 {
+    @include bg("../images/lottery/deco-item3.png");
+    position: absolute;
+    top: 210px;
+    left: 426px;
+  }
+  .d4 {
+    // @include bg("../images/lottery/deco-item4.png");
+    position: absolute;
+    top: 0;
+    left: 542px;
+    .d4-1 {
+      @include bg("../images/lottery/deco-item4-1.png");
+      position: absolute;
+      top: 6px;
+      left: 0;
+      z-index: 1;
+    }
+    .d4-2 {
+      @include bg("../images/lottery/deco-item4-2.png");
+      position: absolute;
+      top: 6px;
+      left: 100px;
+    }
+  }
+  .d5 {
+    @include bg("../images/lottery/deco-item5.png");
+    position: absolute;
+    top: 72px;
+    left: 184px;
+  }
+  .d6 {
+    @include bg("../images/lottery/deco-item6.png");
+    position: absolute;
+    top: 57px;
+    left: 442px;
+  }
+}
+.cloud-box {
+  li {
+    @include bg("../images/cloud-left.png");
+    position: absolute;
+    // z-index: -1;
+  }
+  .right {
+    background-image: url(../images/cloud-right.png);
+  }
+  .c1 {
+    top: 195px;
+    left: -28px;
+  }
+  .c2 {
+    top: 292px;
+    left: -467px;
+  }
+  .c3 {
+    top: 418px;
+    left: -245px;
+  }
+  .c4 {
+    top: 595px;
+    left: -29px;
+  }
+  .c5 {
+    top: 692px;
+    left: -467px;
+  }
+  .c6 {
+    top: 818px;
+    left: -245px;
+  }
+  .c7 {
+    top: 180px;
+    left: 1005px;
+  }
+  .c8 {
+    top: 286px;
+    left: 731px;
+  }
+  .c9 {
+    top: 352px;
+    left: 1192px;
+  }
+  .c10 {
+    top: 580px;
+    left: 1006px;
+  }
+  .c11 {
+    top: 723px;
+    left: 732px;
+  }
+  .c12 {
+    top: 752px;
+    left: 1192px;
+  }
+}
+.light-box {
+  li {
+    @include bg("../images/light.png");
+    position: absolute;
+  }
+  .small {
+    @include bg("../images/light-small.png");
+  }
+  .l1 {
+    top: 830px;
+    left: -514px;
+  }
+  .l2 {
+    top: 907px;
+    left: -314px;
+  }
+  .l3 {
+    top: 847px;
+    left: 917px;
+  }
+  .l4 {
+    top: 865px;
+    left: 1135px;
+  }
+}
+.copyright {
+  @include bg("../images/copyright.png");
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 9px;
+  margin: 0 auto;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .75);
+  z-index: 99;
+  overflow-y: auto;
+  .popup-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 800px;
+    height: 100%;
+    // background: #242322;
+    // @include opacity(.8);
+  }
+  .popup-box {
+    position: relative;
+    min-width: 800px;
+    height: 100%;
+  }
+  .popup-main {
+    position: absolute;
+    // top: 100px;
+    // padding: 50px;
+    left: 0;
+    right: 0;
+    margin:  0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .popup-content {
+    position: relative;
+    margin: 0 auto;
+    padding: 145px 0 55px;
+    width: 800px;
+    // color: #199f8e;
+    // font-weight: 700;
+    // width: image-width('../images/popup/popup-cont.png');
+    // height: image-height('../images/popup/popup-cont.png');
+    // @include bg('../images/popup/popup-cont.png');
+  }
+  .pop-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    @include bg('../images/popup/lottery/popup-close-btn.png');
+  }
+  &#menu {
+    background: #C1000A;
+    .popup-mask {
+      // background: #C1000A;
+      // opacity: 1;
+    }
+    .pop-close-btn {
+      @include bg('../images/popup/menu-close-btn.png');
+    }
+    .menu-list {
+      width: 630px;
+      margin: 0 auto;
+      li {
+        position: relative;
+        height: 140px;
+        & ~ li {
+          border-top: 2px solid #FFF;
+        }
+        &:hover {
+          span {
+            background-position-y: -57px;
+          }
+        }
+      }
+      .activity {
+        span {
+          @include bg("../images/popup/activity.png", 1/2);
+          @include align();
+        }
+      }
+      .lottery {
+        span {
+          @include bg("../images/popup/lottery.png", 1/2);
+          @include align();
+        }
+      }
+      .award {
+        span {
+          @include bg("../images/popup/award.png", 1/2);
+          @include align();
+        }
+      }
+      .fb-fans {
+        span {
+          @include bg("../images/popup/fb-fans.png", 1/2);
+          @include align();
+        }
+      }
+      .fb-share {
+        span {
+          @include bg("../images/popup/fb-share.png", 1/2);
+          @include align();
+        }
+      }
+    }
+  }
+}

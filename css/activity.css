@@ -1,0 +1,17 @@
+.privacy-content {
+  background-image: url("../images/activity/activity-cont.png");
+  background-repeat: no-repeat;
+  width: 668px;
+  height: 701px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 230px;
+  z-index: 1; }
+  .privacy-content .rollbar-box {
+    width: 701px;
+    height: 545px;
+    margin: 106px auto 0; }
+    .privacy-content .rollbar-box img {
+      margin-left: 30px; }

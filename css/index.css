@@ -1,0 +1,228 @@
+.title {
+  background-image: url("../images/title.png");
+  background-repeat: no-repeat;
+  width: 633px;
+  height: 405px;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  z-index: 2; }
+
+.lottery-btn {
+  background-image: url("../images/lottery.png");
+  background-repeat: no-repeat;
+  width: 606px;
+  height: 164px;
+  position: absolute;
+  top: 385px;
+  left: 85px;
+  z-index: 1; }
+  .lottery-btn .lottery-content {
+    background-image: url("../images/lottery.png");
+    background-repeat: no-repeat;
+    width: 606px;
+    height: 164px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .lottery-btn .lottery-item1 {
+    background-image: url("../images/lottery-item1.png");
+    background-repeat: no-repeat;
+    width: 119px;
+    height: 165px;
+    position: absolute;
+    top: -59px;
+    left: -4px; }
+  .lottery-btn .lottery-item2 {
+    background-image: url("../images/lottery-item2.png");
+    background-repeat: no-repeat;
+    width: 108px;
+    height: 140px;
+    position: absolute;
+    top: 29px;
+    left: 78px; }
+  .lottery-btn .lottery-handle {
+    position: absolute;
+    left: 589px;
+    top: -55px;
+    width: 66px;
+    height: 177px;
+    overflow: hidden;
+    z-index: -1; }
+    .lottery-btn .lottery-handle img {
+      width: 100%; }
+    .lottery-btn .lottery-handle.active {
+      top: -43px; }
+      .lottery-btn .lottery-handle.active img {
+        position: absolute;
+        top: -188px; }
+
+.intro {
+  position: absolute;
+  top: 578px;
+  left: 20px;
+  width: 741px;
+  height: 214px;
+  z-index: 1; }
+  .intro .intro-video {
+    background-image: url("../images/intro-video.png");
+    background-repeat: no-repeat;
+    width: 267px;
+    height: 214px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .intro .intro-text {
+    background-image: url("../images/intro-text.png");
+    background-repeat: no-repeat;
+    width: 464px;
+    height: 189px;
+    position: absolute;
+    top: 12px;
+    right: 0; }
+
+.deco2 {
+  background-image: url("../images/deco.png");
+  background-repeat: no-repeat;
+  width: 763px;
+  height: 397px;
+  position: absolute;
+  top: 794px;
+  left: 11px; }
+
+.deco {
+  position: absolute;
+  top: 812px;
+  left: 11px;
+  z-index: 2; }
+  .deco .d1 {
+    background-image: url("../images/deco-item1.png");
+    background-repeat: no-repeat;
+    width: 173px;
+    height: 338px;
+    position: absolute;
+    top: 16px;
+    left: 0; }
+  .deco .d2 {
+    background-image: url("../images/deco-item2.png");
+    background-repeat: no-repeat;
+    width: 132px;
+    height: 151px;
+    position: absolute;
+    top: 212px;
+    left: 162px; }
+  .deco .d3 {
+    background-image: url("../images/deco-item3.png");
+    background-repeat: no-repeat;
+    width: 121px;
+    height: 87px;
+    position: absolute;
+    top: 283px;
+    left: 354px; }
+  .deco .d4 {
+    position: absolute;
+    top: -18px;
+    left: 452px; }
+    .deco .d4 .d4-1 {
+      background-image: url("../images/deco-item4-1.png");
+      background-repeat: no-repeat;
+      width: 187px;
+      height: 397px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1; }
+    .deco .d4 .d4-2 {
+      background-image: url("../images/deco-item4-2.png");
+      background-repeat: no-repeat;
+      width: 179px;
+      height: 389px;
+      position: absolute;
+      top: 1px;
+      left: 132px; }
+  .deco .d5 {
+    background-image: url("../images/deco-item5.png");
+    background-repeat: no-repeat;
+    width: 101px;
+    height: 68px;
+    position: absolute;
+    top: 119px;
+    left: 195px; }
+  .deco .d6 {
+    background-image: url("../images/deco-item6.png");
+    background-repeat: no-repeat;
+    width: 122px;
+    height: 103px;
+    position: absolute;
+    top: 58px;
+    left: 307px; }
+
+/*============== youtube ==============*/
+.video_popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: none; }
+  .video_popup div, .video_popup a {
+    position: absolute; }
+  .video_popup .video_bg, .video_popup .video_btn, .video_popup .video_content, .video_popup .video_content iframe {
+    width: 100%;
+    height: 100%; }
+  .video_popup .video_bg {
+    background: #000;
+    opacity: 0.5;
+    z-index: 1; }
+  .video_popup .video_btn {
+    display: none; }
+  .video_popup .skip_btn {
+    background-image: url("../images/btn_vdo_skip.png");
+    background-repeat: no-repeat;
+    width: 184px;
+    height: 144px;
+    width: 184px;
+    height: 72px;
+    bottom: 50px;
+    right: 20px;
+    z-index: 5; }
+  .video_popup .skip_btn:hover {
+    background-position: 0px -72px; }
+  .video_popup .video_content {
+    z-index: 2; }
+
+.video_popup.m .video_btn {
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  display: block; }
+  .video_popup.m .video_btn .mobile_video_preview {
+    background-image: url("../images/mobile_video_preview.jpg");
+    background-repeat: no-repeat;
+	background-position:center center;
+    width: 800px;
+    height: 100%;
+    z-index: 1;
+    position: absolute; }
+  .video_popup.m .video_btn .video_play_btn {
+    background-image: url("../images/btn_vdo_play.png");
+    background-repeat: no-repeat;
+    width: 156px;
+    height: 156px;
+    top: 50%;
+    left: 50%;
+    margin: -78px 0 0 -78px;
+    z-index: 2;
+    position: absolute; }
+.video_popup.m .skip_btn {
+  background-image: url("../images/btn_vdo_close.png");
+  background-repeat: no-repeat;
+  width: 114px;
+  height: 114px;
+  width: 114px;
+  height: 114px;
+  top: 5px;
+  right: 5px; }
+.video_popup.m .skip_btn:hover {
+  background-position: 0px 0px; }

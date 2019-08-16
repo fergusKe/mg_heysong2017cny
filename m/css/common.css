@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  background: url('../images/comingSoon.png') 50% 0;
+  min-width: 800px;
+  height: 1250px;
+}

@@ -1,0 +1,122 @@
+@mixin bg($path, $heightScale:1, $unit: '%', $cache:false){
+  $bgWidth: image-width($path);
+  $bgHeight: image-height($path);
+  // background: image-url($path,false,$cache);
+  background-image: url($path);
+  background-repeat: no-repeat;
+  width: $bgWidth;
+  @if $unit == '%' {
+    height: $bgHeight * $heightScale;
+  } @else if $unit == 'px' {
+    height: $heightScale;
+  }
+}
+@mixin bgHover($path, $heightScale:1/2, $bgPositionScaleX: 0, $bgPositionScaleY: 1/2) {
+  $bgWidth: image-width($path);
+  $bgHeight: image-height($path);
+
+  background-image: url($path);
+  background-repeat: no-repeat;
+  width: $bgWidth;
+  @if $heightScale == 1/2 {
+    height: $bgHeight * $heightScale;
+  } @else {
+    height: $heightScale;
+  }
+  &:hover {
+    @if $heightScale == 1/2 {
+      background-position:  ($bgWidth * $bgPositionScaleX) ($bgHeight * $bgPositionScaleY * -1);
+    } @else {
+      // $newHeight = $bgHeight - $heightScale;
+      background-position:  $bgPositionScaleX ($heightScale * -1);
+    }
+  }
+  &.active {
+    @if $heightScale == 1/2 {
+      background-position:  ($bgWidth * $bgPositionScaleX) ($bgHeight * $bgPositionScaleY * -1);
+    } @else {
+      // $newHeight = $bgHeight - $heightScale;
+      background-position:  $bgPositionScaleX ($heightScale * -1);
+    }
+  }
+}
+@mixin bgPosition($path, $bgPositionScaleX: 0, $bgPositionScaleY: 0, $unit: '%') {
+  $bgWidth: image-width($path);
+  $bgHeight: image-height($path);
+  @if $unit == '%' {
+    background-position:  ($bgWidth * $bgPositionScaleX) ($bgHeight * $bgPositionScaleY);
+  } @else if $unit == 'px' {
+    background-position:  $bgPositionScaleX $bgPositionScaleY;
+  }
+}
+// @mixin row($num, $type: 'div') {
+//   @if $type == 'div' {
+//     > div {
+//       display: inline-block;
+//     }
+//   }
+// }
+// @mixin bg($img)
+//  background: url("../images/#{$img}")
+//  width: image-width("../images/#{$img}")
+//  height: image-height("../images/#{$img}")
+@mixin align($position: center) {
+  position: absolute;
+  @if $position == center {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto
+  }
+  @if $position == v {
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+  @if $position == h {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+@mixin triangle($size, $color, $align, $type: 1) {
+  height: 0;
+  width: 0;
+  @if $align == top {
+    border-bottom: $size * $type solid $color;
+    border-left: $size / 2 solid transparent;
+    border-right: $size / 2 solid transparent;
+  }
+  @else if $align == right {
+    border-left: $size * $type solid $color;
+    border-top: $size / 2 solid transparent;
+    border-bottom: $size / 2 solid transparent;
+  }
+  @else if $align == bottom {
+    border-top: $size * $type solid $color;
+    border-left: $size / 2 solid transparent;
+    border-right: $size / 2 solid transparent;
+  }
+  @else if $align == left {
+    border-right: $size * $type solid $color;
+    border-top: $size / 2 solid transparent;
+    border-bottom: $size / 2 solid transparent;
+  }
+  @else if $align == right-top {
+    border-right: $size solid $color;
+    border-bottom: $size solid transparent;
+  }
+  @else if $align == left-top {
+    border-left: $size solid $color;
+    border-bottom: $size solid transparent;
+  }
+  @else if $align == right-bottom {
+    border-right: $size solid $color;
+    border-top: $size solid transparent;
+  }
+  @else if $align == left-bottom {
+    border-left: $size solid $color;
+    border-top: $size solid transparent;
+  }
+}

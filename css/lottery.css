@@ -1,0 +1,455 @@
+.sky-light {
+  /*@include bg("../images/lottery/slotMachine/sky-light.png");*/
+  position: absolute;
+  top: 178px;
+  left: 618px;
+  z-index: 1; }
+  .sky-light .s1 {
+    background-image: url("../images/lottery/slotMachine/sky-light-item1.png");
+    background-repeat: no-repeat;
+    width: 49px;
+    height: 51px;
+    position: absolute;
+    top: 49px;
+    left: 0; }
+  .sky-light .s2 {
+    background-image: url("../images/lottery/slotMachine/sky-light-item2.png");
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 66px;
+    position: absolute;
+    top: 0;
+    left: 77px; }
+  .sky-light .s3 {
+    background-image: url("../images/lottery/slotMachine/sky-light-item3.png");
+    background-repeat: no-repeat;
+    width: 52px;
+    height: 51px;
+    position: absolute;
+    top: 78px;
+    left: 123px; }
+
+.input-number-box {
+  position: absolute;
+  top: 304px;
+  width: 100%;
+  background-image: url("../images/lottery/input-number.png");
+  background-repeat: no-repeat;
+  width: 649px;
+  height: 505px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1; }
+  .input-number-box .input-item1 {
+    background-image: url("../images/lottery/input-item1.png");
+    background-repeat: no-repeat;
+    width: 182px;
+    height: 160px;
+    position: absolute;
+    left: -61px;
+    top: -43px; }
+  .input-number-box .input-item2 {
+    background-image: url("../images/lottery/input-item2.png");
+    background-repeat: no-repeat;
+    width: 102px;
+    height: 150px;
+    position: absolute;
+    left: 589px;
+    top: -25px; }
+  .input-number-box .input-item3 {
+    background-image: url("../images/lottery/input-item3.png");
+    background-repeat: no-repeat;
+    width: 133px;
+    height: 134px;
+    position: absolute;
+    left: 468px;
+    top: 317px; }
+  .input-number-box .input-text {
+    background-image: url("../images/lottery/input-text.png");
+    background-repeat: no-repeat;
+    width: 527px;
+    height: 83px;
+    position: absolute;
+    left: 68px;
+    top: 30px; }
+  .input-number-box .table-input {
+    position: absolute;
+    top: 138px;
+    width: 100%; }
+    .input-number-box .table-input .form-input {
+      margin-bottom: 23px; }
+      .input-number-box .table-input .form-input input {
+        float: none;
+        margin-left: 143px;
+        width: 442px;
+        height: 75px;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+        font-size: 36px; }
+    .input-number-box .table-input .input-next-btn {
+      background-image: url("../images/lottery/input-number-btn.png");
+      background-repeat: no-repeat;
+      width: 410px;
+      height: 106px;
+      position: absolute;
+      left: 119px;
+      top: 316px;
+      background-color: transparent; }
+  .input-number-box .input-more-btn {
+    display: none;
+    background-image: url("../images/lottery/input-more-btn.png");
+    background-repeat: no-repeat;
+    width: 410px;
+    height: 106px;
+    position: absolute;
+    left: 119px;
+    top: 455px; }
+
+.input-number-box.step2 {
+  display: none;
+  background-image: url("../images/lottery/input-number-step2.png");
+  background-repeat: no-repeat;
+  width: 649px;
+  height: 505px; }
+  .input-number-box.step2 .table-input, .input-number-box.step2 .input-item3 {
+    display: none; }
+  .input-number-box.step2 .input-more-btn {
+    display: block; }
+
+.slot-machine-box {
+  position: absolute;
+  top: 292px;
+  width: 100%;
+  height: 614px;
+  z-index: 1; }
+  .slot-machine-box .slot-award {
+    display: none;
+    margin-top: -85px;
+    margin-left: 5px; }
+  .slot-machine-box .slot-handle {
+    position: absolute;
+    top: 177px;
+    left: 700px;
+    width: 88px;
+    height: 268px;
+    background: url("../images/lottery/slotMachine/slot-machine-handle.png") 0 0 no-repeat;
+    cursor: pointer; }
+    .slot-machine-box .slot-handle.active {
+      top: 211px;
+      background: url("../images/lottery/slotMachine/slot-machine-handle.png") 0 -268px no-repeat; }
+  .slot-machine-box .slot-machine {
+    position: absolute;
+    left: 35px;
+    background-image: url("../images/lottery/slotMachine/slot-machine.png");
+    background-repeat: no-repeat;
+    width: 671px;
+    height: 614px; }
+    .slot-machine-box .slot-machine .slot-title {
+      background-image: url("../images/lottery/slotMachine/step1-text-top.png");
+      background-repeat: no-repeat;
+      width: 679px;
+      height: 153px;
+      position: absolute;
+      top: 15px;
+      left: -27px; }
+    .slot-machine-box .slot-machine .gold .g1 {
+      background-image: url("../images/lottery/slotMachine/gold-item1.png");
+      background-repeat: no-repeat;
+      width: 29px;
+      height: 21px;
+      position: absolute;
+      top: 61px;
+      left: 574px; }
+    .slot-machine-box .slot-machine .gold .g2 {
+      background-image: url("../images/lottery/slotMachine/gold-item2.png");
+      background-repeat: no-repeat;
+      width: 46px;
+      height: 33px;
+      position: absolute;
+      top: 23px;
+      left: 603px; }
+    .slot-machine-box .slot-machine .s-l {
+      position: absolute;
+      width: 157px;
+      height: 238px;
+      top: 249px;
+      font-size: 0;
+      overflow: hidden; }
+      .slot-machine-box .slot-machine .s-l li {
+        position: relative;
+        width: 100%;
+        height: 238px; }
+      .slot-machine-box .slot-machine .s-l img {
+        position: absolute;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto; }
+    .slot-machine-box .slot-machine .slot-list1 {
+      left: 65px; }
+    .slot-machine-box .slot-machine .slot-list2 {
+      left: 257px; }
+    .slot-machine-box .slot-machine .slot-list3 {
+      left: 448px; }
+    .slot-machine-box .slot-machine .notes {
+      background-image: url("../images/lottery/slotMachine/step1-text-bottom.png");
+      background-repeat: no-repeat;
+      width: 572px;
+      height: 36px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 552px; }
+
+.slot-machine-box {
+  display: none; }
+  .slot-machine-box .step2 {
+    display: none; }
+    .slot-machine-box .step2.slot-title {
+      background-image: url("../images/lottery/slotMachine/step2-text-top.png");
+      background-repeat: no-repeat;
+      width: 539px;
+      height: 193px;
+      top: -9px;
+      left: 44px; }
+    .slot-machine-box .step2.notes {
+      background-image: url("../images/lottery/slotMachine/step2-text-bottom.png");
+      background-repeat: no-repeat;
+      width: 624px;
+      height: 25px; }
+    .slot-machine-box .step2.slot-next-btn {
+      background-image: url("../images/lottery/slotMachine/more-number-btn.png");
+      background-repeat: no-repeat;
+      width: 360px;
+      height: 95px;
+      position: absolute;
+      top: 589px;
+      left: 180px;
+      z-index: 1; }
+  .slot-machine-box.step2 {
+    display: none; }
+    .slot-machine-box.step2 .slot-machine-box {
+      top: 207px; }
+    .slot-machine-box.step2 .slot-handle {
+      display: none; }
+    .slot-machine-box.step2 .slot-machine {
+      display: none; }
+    .slot-machine-box.step2 .slot-award {
+      display: block; }
+    .slot-machine-box.step2 .slot-next-btn {
+      background-image: url("../images/lottery/slotMachine/download-btn.png");
+      background-repeat: no-repeat;
+      width: 360px;
+      height: 147px;
+      position: absolute;
+      top: 582px;
+      left: 180px;
+      z-index: 1; }
+
+.popup#login .login-box {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 89px;
+  width: 651px;
+  height: 735px; }
+.popup#login .login-content {
+  background-image: url("../images/popup/lottery/login-first-content.png");
+  background-repeat: no-repeat;
+  width: 650px;
+  height: 597px;
+  position: absolute;
+  padding-top: 95px; }
+  .popup#login .login-content .table-again {
+    display: none; }
+  .popup#login .login-content.again {
+    background-image: url("../images/popup/lottery/login-again-content.png");
+    background-repeat: no-repeat;
+    width: 650px;
+    height: 597px;
+    padding-top: 238px; }
+    .popup#login .login-content.again .table-again {
+      display: block; }
+    .popup#login .login-content.again .table-first {
+      display: none; }
+.popup#login .login-tabs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 101px; }
+  .popup#login .login-tabs li {
+    position: absolute;
+    margin-top: 10px; }
+    .popup#login .login-tabs li.active {
+      margin-top: 0;
+      z-index: 1; }
+  .popup#login .login-tabs .first {
+    left: 0;
+    background-image: url("../images/popup/lottery/login-first.png");
+    background-repeat: no-repeat;
+    width: 319px;
+    height: 86px; }
+    .popup#login .login-tabs .first.active {
+      background-image: url("../images/popup/lottery/login-first-active.png");
+      background-repeat: no-repeat;
+      width: 319px;
+      height: 96px; }
+  .popup#login .login-tabs .again {
+    right: 0;
+    background-image: url("../images/popup/lottery/login-again.png");
+    background-repeat: no-repeat;
+    width: 319px;
+    height: 86px; }
+    .popup#login .login-tabs .again.active {
+      background-image: url("../images/popup/lottery/login-again-active.png");
+      background-repeat: no-repeat;
+      width: 319px;
+      height: 96px; }
+.popup#login form {
+  margin: 0 auto;
+  width: 516px; }
+  .popup#login form .form-name label {
+    background: url("../images/popup/lottery/name.png") 50% 50% no-repeat; }
+  .popup#login form .form-id label {
+    background: url("../images/popup/lottery/id.png") 50% 50% no-repeat; }
+  .popup#login form .form-phone label {
+    background: url("../images/popup/lottery/phone.png") 50% 50% no-repeat; }
+  .popup#login form .form-mail label {
+    background: url("../images/popup/lottery/mail.png") 50% 50% no-repeat; }
+  .popup#login form .cb-content {
+    background-image: url("../images/popup/lottery/checkbox-text.png");
+    background-repeat: no-repeat;
+    width: 444px;
+    height: 27px;
+    position: absolute;
+    top: 16px;
+    left: 58px; }
+    .popup#login form .cb-content .activity-btn {
+      position: absolute;
+      width: 106px;
+      height: 27px;
+      top: 0;
+      left: 181px; }
+    .popup#login form .cb-content .privacy-btn {
+      position: absolute;
+      width: 131px;
+      height: 27px;
+      top: 0;
+      left: 313px; }
+  .popup#login form .next-btn {
+    background-image: url("../images/popup/lottery/next-btn.png");
+    background-repeat: no-repeat;
+    width: 410px;
+    height: 106px;
+    position: absolute;
+    top: 540px;
+    left: 115px;
+    border: none;
+    background-color: transparent; }
+.popup#congratulation {
+  background: rgba(255, 255, 255, 0.5); }
+  .popup#congratulation .popup-content {
+    background-image: url("../images/lottery/slotMachine/congratulation.png");
+    background-repeat: no-repeat;
+    width: 716px;
+    height: 625px;
+    margin-top: 100px; }
+.popup#privacy {
+  color: #FFF;
+  text-align: center;
+  font-size: 30px; }
+  .popup#privacy .privacy-content {
+    background-image: url("../images/popup/lottery/privacy-content.png");
+    background-repeat: no-repeat;
+    width: 666px;
+    height: 699px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 45px; }
+    .popup#privacy .privacy-content .rollbar-box {
+      width: 685px;
+      height: 566px; }
+      .popup#privacy .privacy-content .rollbar-box img {
+        margin-left: -36px; }
+  .popup#privacy .close-btn {
+    background-image: url("../images/popup/lottery/close-btn.png");
+    background-repeat: no-repeat;
+    width: 410px;
+    height: 106px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 20px; }
+
+.form-group.row label {
+  float: left;
+  width: 30%;
+  height: 58px;
+  margin-bottom: 0; }
+.form-group.row input {
+  float: right;
+  width: 66%;
+  border: 2px solid #000;
+  font-size: 30px;
+  height: 58px; }
+.form-group.row::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.form-check {
+  clear: both; }
+
+.checkbox-area {
+  position: relative; }
+  .checkbox-area svg {
+    border: none;
+    display: block; }
+  .checkbox-area label {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none; }
+    .checkbox-area label svg {
+      height: 48px;
+      float: left;
+      width: 48px; }
+      .checkbox-area label svg rect, .checkbox-area label svg polyline {
+        fill: none;
+        stroke-width: 4; }
+      .checkbox-area label svg rect {
+        stroke: #444; }
+  .checkbox-area input[type="checkbox"] {
+    display: none;
+    margin: 10px 0 0 5px;
+    width: 37px;
+    height: 37px; }
+    .checkbox-area input[type="checkbox"]:checked + label svg rect {
+      stroke: #444; }
+    .checkbox-area input[type="checkbox"]:checked + label svg polyline {
+      stroke: #C1000A; }
+    .checkbox-area input[type="checkbox"]:checked + label svg polyline {
+      -webkit-animation: checked 0.5s ease forwards;
+      animation: checked 0.5s ease forwards;
+      stroke-dasharray: 50;
+      stroke-dashoffset: 50; }
+@-webkit-keyframes checked {
+  to {
+    stroke-dashoffset: 0; } }
+@keyframes checked {
+  to {
+    stroke-dashoffset: 0; } }
+.checkbox-area.ie label {
+  display: none; }
+.checkbox-area.ie input[type="checkbox"] {
+  display: block; }
