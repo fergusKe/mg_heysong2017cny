@@ -60,8 +60,8 @@
             var className = $(this).parent().attr('class').split(" ")[0];
             switch (className) {
                 case "lottery":
-                    e.preventDefault();
-                    window.activityEndMsg();
+                    // e.preventDefault();
+                    // window.activityEndMsg();
                     break;
                 case "award":
                     e.preventDefault();

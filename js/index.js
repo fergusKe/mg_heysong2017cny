@@ -40,8 +40,8 @@
 		});
 
 		$('.lottery-btn a').on('click', function(e){
-			e.preventDefault();
-			window.activityEndMsg();
+			// e.preventDefault();
+			// window.activityEndMsg();
 		});
 
 

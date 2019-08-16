@@ -1,8 +1,8 @@
 (function ($) {
   var _userObj = {}, _gameEndTL, _slotMachine, _winTL;
 
-  window.activityEndMsg();
-  window.location.href = "index.html";
+  // window.activityEndMsg();
+  // window.location.href = "index.html";
 
   $(function () {
     $('.main').automove({ paused:true, playComplete: initComplete });
@@ -89,7 +89,8 @@
     //control form
     $('#addBtn').on('click', function(e){
       e.preventDefault();
-      addFormCheck();
+      // addFormCheck();
+      addUserData();
     });
 
     $('#loginBtn').on('click', function(e){
@@ -342,49 +343,61 @@
   //==============data=====================
   function activity() {
     Fun.loadingChange(true);
-    $.post("actions/activity.php", {}, function (data) {
+    // $.post("actions/activity.php", {}, function (data) {
       Fun.loadingChange(false);
-      if (!data.result) {
-        _userObj.activityBol = true;
-      }
+      // if (!data.result) {
+      //   _userObj.activityBol = true;
+      // }
       init();
-    }, 'json');
+    // }, 'json');
     //init();
   }
 
   function addUserData(pObj) {
     var sendObj = $.extend(getFbObj(), pObj);
     Fun.loadingChange(true);
-    $.post("actions/add_user_data.php", sendObj, function (data) {
+    // $.post("actions/add_user_data.php", sendObj, function (data) {
       Fun.loadingChange(false);
+      var data = {
+        result: true,
+        event_id: 1
+      }
       if (data.result) {
         loginEnd(data);
       } else {
         alert(data.msg);
       }
-    }, 'json');
+    // }, 'json');
     //loginEnd({event_id:123});
   }
 
   function login(pObj) {
     var sendObj = $.extend(getFbObj(), pObj);
     Fun.loadingChange(true);
-    $.post("actions/login.php", sendObj, function (data) {
+    // $.post("actions/login.php", sendObj, function (data) {
       Fun.loadingChange(false);
+      var data = {
+        result: true,
+        event_id: 1
+      }
       if (data.result) {
         loginEnd(data);
       } else {
         alert(data.msg);
       }
-    }, 'json');
+    // }, 'json');
     //loginEnd({event_id:123});
   }
 
   function addInvoices(pObj) {
     var sendObj = $.extend(getFbObj(), pObj);
     Fun.loadingChange(true);
-    $.post("actions/add_invoices.php", sendObj, function (data) {
+    // $.post("actions/add_invoices.php", sendObj, function (data) {
       Fun.loadingChange(false);
+      var data = {
+        result: true,
+        game_id: 1
+      }
       if (data.result) {
         if(data.game_id){
           _userObj.game_id = data.game_id;
@@ -395,7 +408,7 @@
       } else {
         alert(data.msg);
       }
-    }, 'json');
+    // }, 'json');
     /*_userObj.game_id = "123456789";
     changeStep("game");*/
   }
@@ -403,20 +416,24 @@
   function gift(pObj) {
     var sendObj = $.extend(getFbObj(), pObj);
     Fun.loadingChange(true);
-    $.post("actions/gift.php", sendObj, function (data) {
+    // $.post("actions/gift.php", sendObj, function (data) {
       Fun.loadingChange(false);
+      var data = {
+        result: true,
+        img: 'images/lottery/slotMachine/step3-award.png'
+      }
       if (data.result) {
         if(data.img){
           _userObj.img = data.img;
           $('#game_gift img').attr('src',_userObj.img);
-          $('#download a').attr('href', "download.php?file_name=" + _userObj.img);
+          // $('#download a').attr('href', "download.php?file_name=" + _userObj.img);
           
         }
         changeStep('loadData');
       } else {
         console.log(data.msg);
       }
-    }, 'json');
+    // }, 'json');
     /*_userObj.img = "1234";
     changeStep('loadData');*/
     
